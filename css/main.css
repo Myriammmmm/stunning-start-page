@@ -1,0 +1,11 @@
+html {
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+  font-size: 0.875rem;
+  color: #000;
+  background-color: #bebebe;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
