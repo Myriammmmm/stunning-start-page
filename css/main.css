@@ -41,7 +41,7 @@ nav ul {
   padding: 1.5rem 1rem;
 }
 
-li a {
+nav a {
   font-family: "PT Sans Narrow";
   font-size: 1.125rem;
   color: #eccee2;
@@ -52,6 +52,10 @@ li a {
   border-radius: 6px;
 }
 
+nav a:hover {
+  background-color: #960062;
+}
+
 header h1 {
   margin: 0;
   grid-area: center;
@@ -60,4 +64,27 @@ header h1 {
 
 img {
   width: 100%;
+  display: block;
 }
+
+main {
+  padding: 0 1rem;
+}
+
+main p {
+  margin: 0 0 1.5rem;
+  font-size: 1.125rem;
+}
+
+section h2 {
+  font-family: "PT Sans Narrow";
+}
+section ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+section ul li div {
+  display: flex;
+}
+List items inside section will have a display grid as items are on top of each other, columns will be 1 and in this you will need to assign areas so that items inside the sections are properly distributed
