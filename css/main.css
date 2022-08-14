@@ -23,7 +23,7 @@ header {
   grid-template-rows: auto 1.5rem;
   grid-template-areas:
   "left center right"
-  ". center ."
+  ". center .";
 }
 
 nav {
@@ -42,7 +42,7 @@ nav ul {
 }
 
 nav a {
-  font-family: "PT Sans Narrow";
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.125rem;
   color: #eccee2;
   text-decoration: none;
@@ -77,14 +77,84 @@ main p {
 }
 
 section h2 {
-  font-family: "PT Sans Narrow";
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+section {
+  border-bottom: 2px solid #afafaf;
+  border-top: 2px solid #afafaf;
+  padding: 1.5rem 0;
 }
 section ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section ul li {
+  background-color: #ccc;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "top"
+    "middle"
+    "bottom";
+  border: 2px solid #afafaf;
+  border-radius: 6px;
+}
+
+section ul li h3 {
+  grid-area: bottom;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.125rem;
+  text-align: center;
+  padding: .5em;
+  z-index: 1;
+  background-color: #afafaf;
+  opacity: .9;
+}
+
+section ul li img {
+  grid-column: 1/-1;
+  grid-row: 1/-1
+  padding: 0 0 1rem;
 }
 
 section ul li div {
   display: flex;
+  grid-area: top;
+  flex-direction: row-reverse;
+  justify-self: end;
+  align-items: center;
+  border-radius: 1em 0 0 1em;
+  margin-top: .5em;
+  font-style: italic;
+  background-color: #afafaf;
+  padding: 0 .5em;
+  z-index: 1;
 }
-List items inside section will have a display grid as items are on top of each other, columns will be 1 and in this you will need to assign areas so that items inside the sections are properly distributed
+
+section ul li div img {
+  margin: 0 .5em;
+  width: 1em;
+  height: 1em;
+}
+
+section ul li div strong {
+ font-weight: normal;
+}
+
+footer {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1rem;
+ font-size: .875rem;
+}
+
+footer a {
+  color: #000;
+}
